@@ -13,13 +13,11 @@ git clone https://github.com/cjpannila/water-bill-manager.git
 ```sh
 mvn clean package
 ```
-- Execute the application
+- Execute the application - include the input files in arguments
 ```sh
-java -jar target/WaterBillManager-1.0-SNAPSHOT.jar
+java -jar target/WaterBillManager-1.0-SNAPSHOT.jar <path_to_file>
 ```
-
-## Execution guide
-When you see below in console enter the path to the input file
-```
-Enter file path to process:(press E for exit)
+example
+```sh
+java -jar target/WaterBillManager-1.0-SNAPSHOT.jar 'C:\temp\input1.txt' 'C:\temp\input2.txt'
 ```
