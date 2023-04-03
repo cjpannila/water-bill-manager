@@ -19,5 +19,5 @@ java -jar target/WaterBillManager-1.0-SNAPSHOT.jar <path_to_file>
 ```
 example
 ```sh
-java -jar target/WaterBillManager-1.0-SNAPSHOT.jar C:\temp\input1.txt C:\temp\input2.txt
+java -jar target/WaterBillManager-1.0-SNAPSHOT.jar 'C:\temp\input1.txt' 'C:\temp\input2.txt'
 ```
