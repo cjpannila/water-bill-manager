@@ -7,6 +7,7 @@
  */
 package com.fabricgroup.waterbillmanager;
 
+import com.fabricgroup.waterbillmanager.controller.BillController;
 import com.fabricgroup.waterbillmanager.controller.InputFileController;
 import com.fabricgroup.waterbillmanager.util.Constants;
 import model.WaterBill;
@@ -20,11 +21,13 @@ public class Main {
                 System.out.println(Constants.PROCESSING_FILE + inputFilePath);
                 InputFileController inputFileController = new InputFileController(inputFilePath);
                 WaterBill waterBill = inputFileController.ReadInputFile();
-                System.out.println(waterBill.getRooms() + "|" + waterBill.getGuests() + "|"
-                + waterBill.getCorporatePercentage() + "|" + waterBill.getBorewellPercentage());
+                BillController billController = new BillController(waterBill);
+                billController.calculateTotalUsageAndCost();
+                billController.printTotalUsageAndCost();
             }
         } else {
             System.out.println(Constants.INPUT_FILEPATH_ARG_NOT_FOUND_MESSAGE);
         }
+        System.out.println(Constants.APPLICATION_END_MESSAGE);
     }
 }

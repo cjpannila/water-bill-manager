@@ -5,15 +5,10 @@ public class WaterBill {
     private double corporatePercentage;
     private double borewellPercentage;
     private int guests;
+    private int totalWaterLiters;
+    private int totalCost;
 
     public WaterBill() {
-    }
-
-    public WaterBill(int rooms, double corporatePercentage, double borewellPercentage, int guests) {
-        this.setRooms(rooms);
-        this.setCorporatePercentage(corporatePercentage);
-        this.setBorewellPercentage(borewellPercentage);
-        this.setGuests(guests);
     }
 
     public int getRooms() {
@@ -46,5 +41,21 @@ public class WaterBill {
 
     public void setGuests(int guests) {
         this.guests = guests;
+    }
+
+    public int getTotalWaterLiters() {
+        return totalWaterLiters;
+    }
+
+    public void setTotalWaterLiters(int totalWaterLiters) {
+        this.totalWaterLiters = totalWaterLiters;
+    }
+
+    public int getTotalCost() {
+        return totalCost;
+    }
+
+    public void setTotalCost(int totalCost) {
+        this.totalCost = totalCost;
     }
 }

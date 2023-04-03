@@ -23,12 +23,4 @@ public class DataTypeConverter {
             return defaultVal;
         }
     }
-
-    public static double parseDoubleWithDefault(String number, int defaultVal) {
-        try {
-            return Double.parseDouble(number);
-        } catch (NumberFormatException e) {
-            return defaultVal;
-        }
-    }
 }
